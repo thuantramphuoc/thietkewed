@@ -1,0 +1,220 @@
+```css id="eqj3k0"
+/* =========================
+   RESET & GLOBAL
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #6c63ff;
+    --secondary: #4ea8de;
+    --dark: #1e1e2f;
+    --light: #ffffff;
+    --gray: #f4f4f4;
+    --text: #333;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #dfe9f3, #ffffff);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* =========================
+   PROFILE CARD
+========================= */
+.main-infor {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.main-infor:hover {
+    transform: translateY(-5px);
+}
+
+/* =========================
+   IMAGE
+========================= */
+img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h1 {
+    font-size: 42px;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin: 20px 0 10px;
+    color: var(--secondary);
+}
+
+/* =========================
+   TEXT & LIST
+========================= */
+p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+li {
+    background: #f8f9ff;
+    margin: 10px auto;
+    padding: 12px 20px;
+    border-radius: 12px;
+    width: fit-content;
+    transition: all 0.3s ease;
+}
+
+li:hover {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* =========================
+   SOCIAL BUTTONS
+========================= */
+.social {
+    display: inline-block;
+    margin: 12px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+}
+
+.social:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(108, 99, 255, 0.4);
+}
+
+/* =========================
+   TABLE
+========================= */
+table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+th {
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color: white;
+    padding: 16px;
+    font-size: 18px;
+}
+
+td {
+    background: white;
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+tr:hover td {
+    background: #f0f4ff;
+    transform: scale(1.01);
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .main-infor {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    img {
+        width: 140px;
+        height: 140px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .social {
+        display: block;
+        margin: 12px auto;
+        width: 80%;
+    }
+}
+```
