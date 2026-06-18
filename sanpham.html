@@ -1,54 +1,232 @@
+```html
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Danh sách sản phẩm</title>
-        <meta charset="utf-8">
-        <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Sản Phẩm</title>
 
-<!-- Latest compiled JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    </head>
-    <body>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background:#f5f7fa;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .hero{
+            background: linear-gradient(135deg,#0d6efd,#4dabf7);
+            color:white;
+            padding:60px 0;
+            margin-bottom:40px;
+            text-align:center;
+        }
+
+        .hero h1{
+            font-weight:bold;
+        }
+
+        .product-item{
+            height:100%;
+            border:none;
+            border-radius:15px;
+            overflow:hidden;
+            transition:all .3s ease;
+            box-shadow:0 4px 12px rgba(0,0,0,.08);
+        }
+
+        .product-item:hover{
+            transform:translateY(-8px);
+            box-shadow:0 10px 25px rgba(0,0,0,.15);
+        }
+
+        .product-image img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+
+        .product-info{
+            display:flex;
+            flex-direction:column;
+        }
+
+        .price{
+            color:#dc3545;
+            font-weight:bold;
+            font-size:1.1rem;
+        }
+
+        .btn-detail{
+            margin-top:auto;
+            border-radius:30px;
+        }
+
+        footer{
+            margin-top:60px;
+            background:#212529;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
         <div class="container">
-            <h2>Minh họa BS Grid</h2>
-            <div class="row row-cols-md-4 g-4">
-                <div class="col text-center">
-                    <div class = "card product-item">
-                        <div class ="ratio ratio-1x1 product-image">
-                            <img src ="assets/images/aodau.jpg"alt= "Áo Đấu"class="card-img-top">
-                        </div>
-                        <!--Có thể tùy chỉnh style = "max-width:200px; width:100%"-->
-                        <div class ="card-body product-info">
-                            <h4 class ="card-title text-danger">Áo Đấu</h4>
-                            <h5 class ="text-danger">Giá khởi điểm: 360000</h5>
-                            <p style ="text-align:justify">
-                                Chiếc áo thi đấu của cầu thủ Cristiano Ronaldo và tặng kèm chữ ký.
-                            </p>
-                            <a href ="#"class = "btn btn-info">Xem chi tiết</a>
-                        </div>
+            <a class="navbar-brand fw-bold" href="#">
+                🛒 Shop Online
+            </a>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <section class="hero">
+        <div class="container">
+            <h1>Danh Sách Sản Phẩm</h1>
+            <p class="lead">
+                Các sản phẩm nổi bật và được yêu thích nhất hiện nay
+            </p>
+        </div>
+    </section>
+
+    <!-- Danh sách sản phẩm -->
+    <div class="container">
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
+
+            <!-- Áo đấu -->
+            <div class="col">
+                <div class="card product-item">
+                    <div class="ratio ratio-1x1 product-image">
+                        <img src="assets/images/aodau.jpg" alt="Áo Đấu">
+                    </div>
+
+                    <div class="card-body product-info">
+                        <h4 class="card-title text-danger">
+                            Áo Đấu CR7
+                        </h4>
+
+                        <p class="price">
+                            360.000 VNĐ
+                        </p>
+
+                        <p>
+                            Chiếc áo thi đấu của Cristiano Ronaldo,
+                            tặng kèm chữ ký lưu niệm.
+                        </p>
+                        <a href="https://vanauthentic.com/ao-dau-adidas-al-nassr-san-nha-2425-ronaldo-039jp0459039"
+
+                        <a href="#" class="btn btn-primary btn-detail">
+                            Xem chi tiết
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <div class="row row-cols-1 row-cols-md-4 g-4">
-                <div class="col text-center">
-                    <div class = "card product-item">
-                        <div class ="ratio ratio-1x1 product-image">
-                            <img src ="assets/images/giay.jfif"alt= Giày Bóng Đá"class="card-img-top">
-                        </div>
-                        <!--Có thể tùy chỉnh style = "max-width:200px; width:100%"-->
-                        <div class ="card-body product-info">
-                            <h4 class ="card-title text-danger">Giày Bóng Đá</h4>
-                            <h5 class ="text-danger">Giá khởi điểm: 3600000</h5>
-                            <p style ="text-align:justify">
-                                Giày đá bóng chữ ký Ronaldo (CR7) là các phiên bản đặc biệt thuộc dòng Nike Mercurial, nổi bật với logo CR7, họa tiết độc quyền và chữ ký của anh trên lót giày. Giá dao động từ 700.000 VNĐ (bản sân cỏ nhân tạo phổ thông) đến hơn 7.000.000 VNĐ (bản Elite cao cấp nhất).
-                            </p>
-                            <a href ="#"class = "btn btn-info">Xem chi tiết</a>
-                        </div>
+            <!-- Giày -->
+            <div class="col">
+                <div class="card product-item">
+                    <div class="ratio ratio-1x1 product-image">
+                        <img src="assets/images/giay.jfif" alt="Giày Bóng Đá">
+                    </div>
+
+                    <div class="card-body product-info">
+                        <h4 class="card-title text-danger">
+                            Giày Bóng Đá CR7
+                        </h4>
+
+                        <p class="price">
+                            3.600.000 VNĐ
+                        </p>
+
+                        <p>
+                            Dòng giày Mercurial CR7 với thiết kế cao cấp,
+                            dành cho sân cỏ tự nhiên và nhân tạo.
+                        </p>
+                        <a href="https://neymarsport.com/collections/giay-co-nhan-tao?utm_source=google&utm_medium=pmax&utm_content=1mOrder&gad_source=1&gad_campaignid=23898141493&gbraid=0AAAAADjaWygVP-yq9y4r4wKALRJlograK&gclid=Cj0KCQjwi8nRBhDhARIsAHZf_pbFfFNHDD5CxA1_RvkagpS9GiEW4Q3uXJWcRBXHcBzaTNgzrt3uuCAaAgOZEALw_wcB"
+
+                        <a href="#" class="btn btn-primary btn-detail">
+                            Xem chi tiết
+                        </a>
                     </div>
                 </div>
             </div>
+
+            <!-- Hủ tiếu -->
+            <div class="col">
+                <div class="card product-item">
+                    <div class="ratio ratio-1x1 product-image">
+                        <img src="assets/images/hutieu.png" alt="Hủ Tiếu Nam Vang">
+                    </div>
+
+                    <div class="card-body product-info">
+                        <h4 class="card-title text-danger">
+                            Hủ Tiếu Nam Vang
+                        </h4>
+
+                        <p class="price">
+                            35.000 VNĐ
+                        </p>
+
+                        <p>
+                            Món ăn nổi tiếng có nguồn gốc từ Campuchia,
+                            rất được ưa chuộng tại miền Nam Việt Nam.
+                        </p>
+                        <a href="https://vinwonders.com/vi/wonderpedia/news/hu-tieu-nam-vang-sai-gon/"
+
+                        <a href="#" class="btn btn-primary btn-detail">
+                            Xem chi tiết
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bánh bao -->
+            <div class="col">
+                <div class="card product-item">
+                    <div class="ratio ratio-1x1 product-image">
+                        <img src="assets/images/banhbao.png" alt="Bánh Bao">
+                    </div>
+
+                    <div class="card-body product-info">
+                        <h4 class="card-title text-danger">
+                            Bánh Bao
+                        </h4>
+
+                        <p class="price">
+                            25.000 VNĐ
+                        </p>
+
+                        <p>
+                            Bánh bao truyền thống với lớp vỏ mềm mịn,
+                            nhân thịt thơm ngon và hấp dẫn.
+                        </p>
+                       <a href="https://mibanhbao.vn/?srsltid=AfmBOop12VVXSXpjAOJf5vXfpuHjMOxfdpdvnZWXAp_ZemJ_yhJ3O1c0"
+
+                        <a href="#" class="btn btn-primary btn-detail">
+                            Xem chi tiết
+                        </a >
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </body>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p class="mb-0">
+            © 2026 Shop Online | Thiết kế bằng Bootstrap 5
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
+```
